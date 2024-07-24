@@ -38,15 +38,15 @@
             canvas: document.getElementById("mycanvas"),
             detectAudio: false
         })
-        voronoi(69,1)
-            .luma(0.420).add(shape(3,3).luma(1))
-            .modulate(osc(-420,-1)
-            .modulate(osc().luma(.123)))
+        voronoi(42,1)
+            .luma(0.69).add(shape(1,1).luma(1))
+            .modulate(osc(-69,-1)
+                .modulate(osc().luma()))
+            .modulate(voronoi(69,1))
             .blend(o0)
             .blend(o0)
             .blend(o0)
-            .blend(o0)
-            .out()
+                .out()
     </script>
 
 </main>
