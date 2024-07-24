@@ -8,7 +8,7 @@
     <meta name="author" content="Brandon Stone">
     <meta property="og:title" content="🏡">
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://barndoors.cc/">
+    <meta property="og:url" content="https://brandonstone.cc/">
     <meta property="og:description" content="▀▄▀▄▀▄ art, music, code ▄▀▄▀▄▀">
 
     <title>brandonnnnnnnnnnnnn</title>
@@ -59,9 +59,30 @@
            </a>
            <a href="/diymediaserver.html" target="_blank">&#8599;&nbsp;DIY Media Server</a>
        </li>
+       <li>
+           <a href="/blog.html" onclick="return ValidatePassword();">
+               <img src="/src/links/rpihahagetit.png" alt="">
+           </a>
+           <a href="/blog.html" target="_blank" onclick="return ValidatePassword();">&#8599;&nbsp;Blog</a>
+       </li>
    </ul>
 </main>
+<script>
+    function ValidatePassword() {
 
+        var password = prompt("계속하려면 비밀번호를 입력하세요", "이거 번역하지 마세요");
+
+        if (password === "plaintextlol") {
+            window.location.href = "/blog.html";
+        }
+        else if (password == "" || password == "이거 번역하지 마세요"){
+            return false;
+        }
+        else{
+        alert("nice try!");
+        return false;}
+    }
+</script>
 <footer>
     <hr>
     <div class="about grid-2">
@@ -80,7 +101,7 @@
         <div class="aboutcontact">
             <h2>Contact</h2>
             <ul>
-                <li><a href="mailto:contact@barndoors.cc" target="_blank">&#8599;&nbsp;e-mail</a></li>
+                <li><a href="mailto:contact@brandonstone.cc" target="_blank">&#8599;&nbsp;e-mail</a></li>
             </ul>
             <p>
                 You can also find me on <a href="https://sunny.garden/@barndoors" target="_blank">&#8599;&nbsp;mastodon</a> and <a href="https://www.instagram.com/barndoors__/" target="_blank">&#8599;&nbsp;instagram</a>, with art being further scattered to <a href="" target="_blank">&#8599;&nbsp;youtube</a> and some <a href="" target="_blank">&#8599;&nbsp;streaming services</a>.
