@@ -15,6 +15,7 @@
     <link rel="icon" href="/src/favicon/favicon.ico">
     <link href="/fonts/fonts.css" rel="stylesheet" type="text/css" media="all">
     <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <script src="/src/blog/blog.js"></script>
     <script src="https://unpkg.com/hydra-synth"></script>
 </head>
 
@@ -67,22 +68,6 @@
        </li>
    </ul>
 </main>
-<script>
-    function ValidatePassword() {
-
-        var password = prompt("계속하려면 비밀번호를 입력하세요", "이거 번역하지 마세요");
-
-        if (password === "plaintextlol") {
-            window.location.href = "/blog.html";
-        }
-        else if (password == "" || password == "이거 번역하지 마세요" || password == null){
-            return false;
-        }
-        else{
-        alert("nice try!");
-        return false;}
-    }
-</script>
 <footer>
     <hr>
     <div class="about grid-2">
