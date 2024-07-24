@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="▀▄▀▄▀▄ art, music, code ▄▀▄▀▄▀">
+	<meta name="keywords" content="art, music, code">
+	<meta name="author" content="Brandon Stone">
+	<meta property="og:title" content="🏡">
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://barndoors.cc/">
+	<meta property="og:description" content="▀▄▀▄▀▄ art, music, code ▄▀▄▀▄▀">
+
+	<title>brandonnnnnnnnnnnnn</title>
+	<link rel="icon" href="/src/favicon/favicon.ico">
+	<link href="/fonts/fonts.css" rel="stylesheet" type="text/css" media="all">
+	<link href="/style.css" rel="stylesheet" type="text/css" media="all">
+	<script src="https://unpkg.com/hydra-synth"></script>
+</head>
+
+<body>
+<div class="homenavcontainer">
+	<header>
+		<h1><a class="headerlink" href="/index.html">brandon stone</a></h1>
+		<nav>
+			<div class="navsection">
+				<p>home</p>
+				<a href="/art.html">art</a>
+				<a href="/links.html">links</a>
+
+			</div>
+		</nav>
+	</header>
+	<img src="/src/navbarself.png" alt="">
+</div>
+
+<main id='content'>
+	<div id="maindisplay-wrapper" style="position: relative; height: 500px">
+		<div id="canvasdiv">
+			<canvas id="mycanvas" width="1280" height="720"></canvas>
+		</div>
+		<div id="codediv">
+			<p>
+				&nbsp;osc(69, 0.25, 1)<br>
+				&emsp;&emsp;.mult(osc(2, 0.8, 0))<br>
+				&emsp;&emsp;.repeat(2, 20)<br>
+				&emsp;&emsp;.rotate(0.25)<br>
+				&emsp;&emsp;.modulate(o1)<br>
+				&emsp;&emsp;.color(0.5058823529411764, 0.6980392156862745, 0.6039215686274509)<br>
+				&emsp;&emsp;.scale(1, () =>  (a.fft[0] * 0.75 + 2))<br>
+				&emsp;&emsp;.diff(o1)<br>
+				.out(o0)<br>
+				&nbsp;osc(20, 0.2, 0)<br>
+				&emsp;&emsp;.color(0.8784313725490196, 0.47843137254901963, 0.37254901960784315)<br>
+				&emsp;&emsp;.mult(osc(42,.1,0))<br>
+				&emsp;&emsp;.modulateRotate(o0, 0.25)<br>
+				&emsp;&emsp;.rotate(0.75)<br>
+				.out(o1)<br>
+			</p>
+		</div>
+	</div>
+
+
+
+	<script>
+		var hydra = new Hydra({
+			canvas: document.getElementById("mycanvas"),
+			detectAudio: false
+		})
+		osc(69, 0.25, 1)
+				.mult(osc(2, 0.8, 0))
+				.repeat(2, 20)
+				.rotate(0.25)
+				.modulate(o1)
+				.color(0.9568627450980393, 0.9450980392156862, 0.8705882352941177)
+				.scale(1, () =>  (a.fft[0]*0.75 + 2))
+				.diff(o1)
+				.out(o0)
+		osc(20, 0.2, 0)
+				.color(0.8784313725490196, 0.47843137254901963, 0.37254901960784315)
+
+				.mult(osc(42,.1,0))
+				.modulateRotate(o0, 0.25)
+				.rotate(0.75)
+				.out(o1)
+	</script>
+</main>
+
+<footer>
+	<hr>
+	<div class="about grid-2">
+		<div class="aboutcontainer">
+			<div class="aboutabout">
+				<h2>About</h2>
+				<p>
+					I'm a digital artist lurking in the mountains of Colorado, blending music and visual distortions. Owner of a <i>very</i> very cute dog.
+				</p>
+			</div>
+			<img src="/src/footerdog.png" alt="">
+		</div>
+		<div class="aboutcontact">
+			<h2>Contact</h2>
+			<ul>
+				<li><a href="mailto:contact@barndoors.cc" target="_blank">&#8599;&nbsp;e-mail</a></li>
+			</ul>
+			<p>
+				You can also find me on <a href="https://sunny.garden/@barndoors" target="_blank">&#8599;&nbsp;mastodon</a> and <a href="https://www.instagram.com/barndoors__/" target="_blank">&#8599;&nbsp;instagram</a>, with art being further scattered to <a href="https://www.youtube.com/@barndoor__s" target="_blank">&#8599;&nbsp;youtube</a> and some <a href="/links.html" target="_blank">&#8599;&nbsp;streaming services</a>.
+				Hungry for spaghetti? Checkout the menu at <a href="https://github.com/brandonns" target="_blank">&#8599;&nbsp;github</a>.
+			</p>
+		</div>
+	</div>
+</footer>
+</body>
+</html>

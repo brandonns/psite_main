@@ -1,0 +1,360 @@
+:root {
+	--background: #f4f1de;
+	--text: #e07a5f;
+	--primary: #81b29a;
+	--secondary: #001a23;
+
+	--darkgreen-background: #001a23;
+	--darkgreen-text: #81b29a
+}
+
+body {
+	font-size: 16px;
+	font-family: 'AzeretMono-ExtraLight', sans-serif;
+	font-weight: 200;
+}
+
+.image-wrapper {
+	position: relative;
+}
+.image-hover {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transition: opacity 1s ease-out;
+}
+.vidimage-hover {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 1;
+	animation-name: myfade;
+	animation-delay: 1s;
+	animation-duration: 3s;
+	animation-fill-mode: forwards;
+}
+@keyframes myfade{
+	from{opacity: 1}
+	to{opacity:0}
+}
+.grid-container > a:hover .image-hover{
+	opacity: 1;
+}
+
+
+.grid-container {
+	max-width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+
+.grid-container > a {
+	text-decoration: none;
+}
+
+.grid-container > a > div > img {
+	width: 200px;
+}
+
+#mycanvas {
+	width: 100%;
+	height: 100%;
+}
+
+
+#canvasdiv{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	display: block;
+	z-index: 1;
+}
+#codediv {
+	position: absolute;
+	height: 100%;
+	width: inherit;
+	display: block;
+	margin-left: 1rem;
+	z-index: 999;
+	opacity: 0;
+	transition: opacity 1s;
+}
+#codediv > p {
+	background-color: rgba(0,26,35, 0.5);
+	color: #F4F1DE
+}
+
+#maindisplay-wrapper:hover > #codediv{
+	opacity: 1;
+}
+
+
+h1, h2, h3,
+nav a,
+nav p {
+	font-weight: normal;
+	text-transform: uppercase;
+}
+
+nav .title {
+	font-weight: normal;
+	text-transform: uppercase;
+}
+
+body {
+	background-color: var(--background);
+	color: var(--text);
+	width: 100vw;
+
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 0;
+}
+
+header {
+	top: 0;
+	background-color: var(--background);
+}
+
+
+.vidheader{
+	animation-name: myvidtrans;
+	animation-delay: 1s;
+	animation-duration: 3s;
+	animation-fill-mode: forwards;
+}
+.vidbody{
+	animation-name: myvidtrans;
+	animation-delay: 1s;
+	animation-duration: 3s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes myvidtrans{
+	from {	background-color: var(--background);}
+	to {background-color: var(--darkgreen-background);}
+}
+.homenavcontainer{
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+}
+.homenavcontainer > img {
+	padding-top: 1rem;
+	padding-right: 1rem;
+	height: 100px
+}
+
+
+.linkscontainer > li {
+	margin-bottom: 1rem;
+}
+.linkscontainer > li > a > img {
+	max-height: 100px;
+	max-width: 100px;
+	margin-right: 1rem;
+}
+
+
+
+
+
+.vidimage-wrapper {
+	position: relative;
+}
+
+
+
+
+.homenavcontainer >.vidimage-wrapper> img {
+	padding-top: 1rem;
+	padding-right: 1rem;
+	height: 100px
+}
+
+
+.aboutcontainer, .vidaboutcontainer {
+	display: flex;
+	justify-content: space-between;
+}
+.aboutcontainer > img, .vidaboutcontainer >.vidimage-wrapper> img{
+	width: 200px;
+	height: 200px;
+	padding-left: .5rem;
+}
+
+header,
+main,
+footer {
+	padding: 1rem;
+}
+
+footer {
+	margin-bottom: 10px;
+}
+
+
+main,
+nav {
+	overflow-y: auto;
+}
+
+p, a {
+	line-height: 120%;
+}
+
+a, a:visited {
+	color: var(--primary);
+}
+
+hr {
+	color: var(--background);
+	border: none;
+	border-bottom: 1px solid var(--text);
+}
+.vidhr {
+	animation-name: myhrtrans;
+	animation-delay: 1s;
+	animation-duration: 3s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes myhrtrans{
+	from {border-bottom: 1px solid var(--text);}
+	to {border-bottom: 1px solid var(--darkgreen-text);}
+}
+
+
+
+ul {
+	list-style: none;
+	padding-left: 16px;
+}
+
+.hidden {
+	display: none;
+}
+
+.navsection {
+	display: inline-block;
+	padding: 2px 0;
+}
+
+header h1 {
+	margin: 0 0 1rem;
+}
+
+nav .title,
+nav a,
+nav p{
+	display: inline;
+}
+
+nav a {
+	text-decoration: underline;
+}
+
+nav p {
+	text-decoration: none;
+	color: var(--primary);
+}
+
+nav a,
+nav a:visited {
+	color: var(--text);
+}
+
+nav a:hover {
+	color: var(--primary);
+}
+
+nav a:active,
+nav a.active {
+	text-decoration: none;
+	color: var(--text);
+}
+
+a.headerlink {
+	color: var(--text);
+	text-decoration: none;
+}
+.vidheaderlink {
+	animation-name: mytexttrans;
+	animation-delay: 1s;
+	animation-duration: 3s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes mytexttrans{
+	from {	color: var(--text);}
+	to {color: var(--darkgreen-text);}
+}
+.start-image {
+	width: 100%;
+	max-width: unset;
+}
+
+
+
+.grid-2,
+.grid-4 {
+	display: grid;
+	grid-gap: 1rem;
+}
+
+.grid-4 {
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.grid-2 {
+	grid-template-columns: 1fr 1fr;
+}
+
+@media screen and (max-width: 800px) {
+	header,
+	main,
+	footer {
+		padding: 0.5rem;
+	}
+	.grid-2, .grid-4 {
+		grid-template-columns: 1fr;
+	}
+	.hide-on-small {
+		display: none;
+	}
+	.show-on-small {
+		display: none;
+	}
+	.grid-container{
+		justify-content: center;
+	}
+
+	.image-wrapper {
+		position: relative;
+	}
+
+	.image-hover {
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: 1;
+		animation: 2s myfade infinite alternate;
+	}
+
+	@keyframes myfade{
+		from{opacity: 1}
+		to{opacity:0}
+	}
+}
+
+@media screen and (min-width: 600px){
+	.overview {
+		grid-template-columns: repeat(8, 1fr);
+		row-gap: 5px;
+		column-gap: 10px;
+	}
+
+}
