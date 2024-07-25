@@ -1,7 +1,7 @@
 website
 
-[brandonstone](brandonstone.cc)
+[brandonstone](https://brandonstone.cc)
 
-[barndoors](barndoors.cc)
+[barndoors](https://barndoors.cc)
 
-[brandonn](brandonn.fyi)
+[brandonn](https://brandonn.fyi)
