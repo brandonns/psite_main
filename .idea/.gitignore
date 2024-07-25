@@ -3,5 +3,8 @@
 /workspace.xml
 # Editor-based HTTP Client requests
 /httpRequests/
+/modules.xml
+/psite_main.iml
+/vcs.xml
 /vcs.xml
 /inspectionProfiles/Project_Default.xml
