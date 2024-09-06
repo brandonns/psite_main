@@ -1,7 +1,2 @@
-website
-
-[brandonstone](https://brandonstone.cc)
-
 [barndoors](https://barndoors.cc)
-
-[brandonn](https://brandonn.fyi)
+![image](https://github.com/user-attachments/assets/a2f25172-6b7a-462f-ac8d-6a3a5519bd6e)
