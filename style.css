@@ -13,14 +13,22 @@ body {
 	font-family: 'AzeretMono-ExtraLight', sans-serif;
 	font-weight: 200;
 }
-
+.articleImg{
+	max-height: 300px;
+	max-width: 100%;
+}
 .article {
 	width:inherit;
 	height:auto;
 	margin-left:auto;
 	margin-right:auto;
-	text-align:center;
+	text-align: justify;
+	text-justify: inter-word;
 	padding-top:10px;
+}
+
+.article > h1, h5{
+	text-align: center;
 }
 
 .image-wrapper {
